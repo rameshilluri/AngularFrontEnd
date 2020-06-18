@@ -26,5 +26,11 @@ constructor(private router : Router,private hardcodedAutenticationService:Hardco
   this.invalidLogin =true
 }   console.log(this.username);
   }
+  handleUpdatePassword(){
+    //if(this.username === "in28minutes"&&this.password==="in28minutes")
+   
+this.router.navigate(['update'])
+ console.log("update");
 
+  }
 }

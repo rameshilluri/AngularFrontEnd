@@ -7,6 +7,7 @@ import { ListstodoComponent } from './liststodo/liststodo.component';
 import { LogoutComponent } from './logout/logout.component';
 import { RouteGuardService } from './service/route-guard.service';
 import { TodoComponent } from './todo/todo.component';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'todos',component:ListstodoComponent,canActivate:[RouteGuardService]},
   {path:'logout',component:LogoutComponent,canActivate:[RouteGuardService]},
   {path:'todos/:id',component:TodoComponent,canActivate:[RouteGuardService]},
-  {path:'**',component:ErrorComponent},];
+  {path:'update',component:UpdatePasswordComponent},
+  {path:'**',component:ErrorComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

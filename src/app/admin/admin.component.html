@@ -1,0 +1,27 @@
+<H3>Update Student</H3>
+
+
+<div class="container">
+  <div class="alert alert-warning" *ngIf="adminForm.invalid && adminForm.dirty">Enter valid values</div>
+  <div class="alert alert-warning" *ngIf="targetDate.invalid && adminForm.dirty">Enter valid date</div>
+  <div class="alert alert-warning" *ngIf="username.invalid && adminForm.dirty">Enter valid User Name</div>
+<form (ngSubmit)="!adminForm.invalid && saveAdmin()" #adminForm="ngForm">
+  <fieldset class="form-group"> 
+<label>
+   Student Name
+</label>
+<input type="text" #username="ngModel" [(ngModel)]="admin.username" class="form-control" name="username" required="required" minlength="5">
+  </fieldset>
+
+  
+  <fieldset class="form-group">
+      <label>Password</label>
+      <input type="text" #password="ngModel"
+      [(ngModel)]="admin.password"
+     
+      class="form-control" name="password" required="required">
+</fieldset>
+
+<button type="submit" class="btn btn-success" >Save</button>
+</form>
+  </div>
